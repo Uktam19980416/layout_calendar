@@ -11,12 +11,10 @@
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
     "build": "mate-scripts build",
-    
+    "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "npm run lint && npm run test:only"
   },
   "devDependencies": {
     "@linthtml/linthtml": "^0.8.3",
