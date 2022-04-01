@@ -1,25 +1,27 @@
 @import "../utils/variables";
 
+.container {
+  position: relative;
+}
+
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  max-width: $block-column * ($block-width + 10px);
+  max-width: $block-column * ($block + $cal-padding);
   gap: $gap;
-  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 5%);
 
   &:nth-child(7n) {
     margin-top: 0;
   }
 
-  &:nth-last-child(-n + 7) {
-    margin-right: 0;
-  }
-
   .days {
-    width: $block-width;
-    height: $block-height;
+    width: $block;
+    height: $block;
     background-color: #eee;
-    border: 2px solid #000;
+    border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +44,7 @@
 
   @each $day, $index in $days {
     &--start-day--#{$day} > :first-child {
-      margin-left: #{(($block-width + $gap) * $index) + 24px};
+      margin-left: #{(($block + $gap) * $index)};
     }
   }
 

@@ -1,8 +1,11 @@
 @import "./blocks/calendar.scss";
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
-  margin: 0;
 }
 // "deploy": "mate-scripts deploy",
